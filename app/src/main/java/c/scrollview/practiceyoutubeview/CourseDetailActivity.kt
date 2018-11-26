@@ -103,9 +103,8 @@ class CourseDetailActivity: AppCompatActivity()
         {
             customView.setOnClickListener {
             val intent = Intent(customView.context, CourseLessonActivity::class.java)
-                customView.context.startActivity(intent)
-
                 intent.putExtra(COURSE_LESSON_LINK_KEY, courseLesson?.link)
+                customView.context.startActivity(intent)
             }
         }
     }
